@@ -3,11 +3,11 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name": "roihan",
-    "email": "roihan@gmail.com",
+    "name": "admin2",
+    "email": "admin2@gmail.com",
     "password": "test123",
     "confPassword": "test123",
-    "role": "user"
+    "role": "admin"
 }
 
 ###
@@ -16,7 +16,7 @@ POST http://localhost:5000/login
 Content-Type: application/json
 
 {
-    "email": "admin1@gmail.com",
+    "email": "admin2@gmail.com",
     "password": "test123"
 }
 
@@ -79,8 +79,8 @@ POST http://localhost:5000/products
 Content-Type: application/json
 
 {
-    "name": "product6",
-    "price": 800
+    "name": "product admin2 3",
+    "price": 2000
 }
 
 

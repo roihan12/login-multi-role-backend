@@ -6,16 +6,16 @@ import UserRoute from "./routes/UserRoute.js";
 import ProductsRoute from "./routes/ProductRoute.js";
 import AuthRoute from "./routes/AuthRoute.js";
 import db from "./config/Database.js";
-import SequelizeStore  from "connect-session-sequelize";
+import SequelizeStore from "connect-session-sequelize";
 
 dotenv.config();
 
 const app = express();
 
-const sessionStore= SequelizeStore(session.Store)
-const store =  new sessionStore({
-  db:db
-})
+const sessionStore = SequelizeStore(session.Store);
+const store = new sessionStore({
+  db: db,
+});
 
 // (async () => {
 //   await db.sync();
@@ -26,7 +26,7 @@ app.use(
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
-    store:store,
+    store: store,
     cookie: {
       secure: "auto",
     },
@@ -35,7 +35,7 @@ app.use(
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:5173",
+    origin: "http://localhost:3000",
   })
 );
 
